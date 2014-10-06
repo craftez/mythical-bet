@@ -1,0 +1,719 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>myth</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+
+        <!-- build:css styles/vendor.css -->
+        <!-- bower:css -->
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+        <link rel="stylesheet" href="bower_components/select2/select2.css" />
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Michroma' rel='stylesheet' type='text/css'>
+        <!-- build:css styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+
+        <!-- build:js scripts/vendor/modernizr.js -->
+        <script src="bower_components/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
+    </head>
+    <body>
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        
+<div class="container">
+    <div class="topnav">
+        <div class="settings">
+            <ul>
+                <li><a href="#" class="mysettings" tabindex="0" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-content="<input type='text' class='form-control' placeholder='Old Password'><input type='text' class='form-control' placeholder='New Password'><input type='text' class='form-control' placeholder='Repeat Password'><button class='btn_deposit'>Deposit</button>">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="home">
+        <div class="row header">
+            <h3 class="col-md-5 text-center" title="MythBet"><img src="images/mythbet_logo.png" alt="Myth Bet"/></h3>
+            <div class="col-md-7 text-center">
+                <div class="balance">
+                    <i class="fa fa-dollar"></i>
+                    <small>Balance</small>
+                    $60.00
+                </div>
+                <div class="inplay">
+                    <i class="fa fa-money"></i>
+                    <small>In-Play</small>
+                    $155.00
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand visible-xs" href="#">Mythical Bet</a>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#" class="home_nav"><i class="fa fa-home"></i></a></li>
+                            <li><a href="#">Mythical Football</a></li>
+                            <li><a href="#">Live Casino</a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="row infobar">
+            <div class="col-sm-12">
+                <div class="col-sm-8">
+                    <p>Welcome, <strong>PETERD</strong></p>
+                    <ul class="nav nav-pills">
+                        <li class="active"><a href="#" class="deposit" tabindex="0" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-content="<input type='number' class='form-control'><button class='btn_deposit'>Deposit</button>">Deposit</a></li>
+                        <li><a href="#" class="withdraw" tabindex="0" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-content="<input type='number' class='form-control'><button class='btn_deposit'>Deposit</button>">Withdraw</a></li>
+                        <li><a href="#" data-toggle="modal" data-target=".transactionhistory">Transaction History</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a href="#" class="btn_placebet" data-toggle="modal" data-target=".placebet">place bet</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="divider">
+    </div>
+    <div class="col-sm-12 datatable">
+        <div class="tablebox">
+        <table class="table table-hover theading">
+                <thead>
+                <tr>
+                    <th width="30%" class="title" colspan="4">Tickets in play</td>
+                    <th class="text-center" width="30%">
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Bet time
+                        </label>
+                        <label class="radio-inline" width="33%">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Event Time
+                        </label>
+                    </th>
+                    <th class="text-center" width="40%">
+                        <ul class="history-links">
+                            <li><a href="#">Last 24 hours</a></li>
+                            <li><a href="#">Last Week</a></li>
+                            <li><a href="#">Last 30 Days</a></li>
+                        </ul>
+                    </td>
+                </tr>
+                </thead>
+            </table>
+            <div class="scroll-table">
+                <table class="table table-hover table-striped">
+                    <tbody>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    </tbody>
+                </table>
+        </div>
+        </div>
+        <div class="tablebox">
+            <table class="table table-hover theading">
+                <thead>
+                <tr>
+                    <th width="30%" class="title" colspan="4">Tickets in play</td>
+                    <th class="text-center" width="30%">
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Bet time
+                        </label>
+                        <label class="radio-inline" width="33%">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Event Time
+                        </label>
+                    </th>
+                    <th class="text-center" width="40%">
+                        <ul class="history-links">
+                            <li><a href="#">Last 24 hours</a></li>
+                            <li><a href="#">Last Week</a></li>
+                            <li><a href="#">Last 30 Days</a></li>
+                        </ul>
+                    </td>
+                </tr>
+                </thead>
+            </table>
+            <div class="scroll-table">
+                <table class="table table-hover table-striped">
+                    <tbody>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    <tr>
+                        <td width="7%">$80</td>
+                        <td width="7%">$240</td>
+                        <td width="7%">Draw</td>
+                        <td width="26%">Liverpool vs Chelsea<small>18/09/2014 @ 13:20 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                        <td width="26%">Westham vs Everton<small>18/09/2014 @ 18:45 PM</small></td>
+                    </tr>
+                    </tbody>
+                </table>
+        </div>
+        </div>
+    </div>
+
+    <!-- Site footer -->
+    <div class="footer text-center">
+        <p class="text-left">© Copyrights by MythicalBet.com 2014<span class="pull-right">powered by <img src="images/lyvegameLogo.png" height="20px" alt="LyveGames LTD"></span></p>
+    </div>
+
+</div>
+
+<div class="modal fade transactionhistory" tabindex="-1" role="dialog" aria-labelledby="transactionhistory" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content datatable">
+            <h2>Transaction History <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button></h2>
+            <div class="tablebox">
+                <table class="table table-hover theading">
+                    <thead>
+                    <tr>
+                        <th>Date</td>
+                        <th>Description</th>
+                        <th>Balance</td>
+                        <th>Amount</td>
+                        <th>Details</td>
+                    </tr>
+                    </thead>
+                </table>
+                <div class="scroll-table">
+                    <table class="table table-hover table-striped">
+                        <tbody>
+                        <tr>
+                            <td>15/01/2012</td>
+                            <td>win</td>
+                            <td>120</td>
+                            <td>40</td>
+                            <td><a href="#">details</a></td>
+                        </tr>
+                        <tr>
+                            <td>15/01/2012</td>
+                            <td>bet</td>
+                            <td>120</td>
+                            <td>40</td>
+                            <td><a href="#">details</a></td>
+                        </tr>
+                        <tr>
+                            <td>15/01/2012</td>
+                            <td>deposit</td>
+                            <td>120</td>
+                            <td>40</td>
+                            <td><a href="#">details</a></td>
+                        </tr>
+                        <tr>
+                            <td>15/01/2012</td>
+                            <td>registered</td>
+                            <td>120</td>
+                            <td>40</td>
+                            <td><a href="#">details</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>15/01/2012</td>
+                            <td>win</td>
+                            <td>120</td>
+                            <td>40</td>
+                            <td><a href="#">details</a></td>
+                        </tr>
+                        <tr>
+                            <td>15/01/2012</td>
+                            <td>bet</td>
+                            <td>120</td>
+                            <td>40</td>
+                            <td><a href="#">details</a></td>
+                        </tr>
+                        <tr>
+                            <td>15/01/2012</td>
+                            <td>deposit</td>
+                            <td>120</td>
+                            <td>40</td>
+                            <td><a href="#">details</a></td>
+                        </tr>
+                        <tr>
+                            <td>15/01/2012</td>
+                            <td>registered</td>
+                            <td>120</td>
+                            <td>40</td>
+                            <td><a href="#">details</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>15/01/2012</td>
+                            <td>win</td>
+                            <td>120</td>
+                            <td>40</td>
+                            <td><a href="#">details</a></td>
+                        </tr>
+                        <tr>
+                            <td>15/01/2012</td>
+                            <td>bet</td>
+                            <td>120</td>
+                            <td>40</td>
+                            <td><a href="#">details</a></td>
+                        </tr>
+                        <tr>
+                            <td>15/01/2012</td>
+                            <td>deposit</td>
+                            <td>120</td>
+                            <td>40</td>
+                            <td><a href="#">details</a></td>
+                        </tr>
+                        <tr>
+                            <td>15/01/2012</td>
+                            <td>registered</td>
+                            <td>120</td>
+                            <td>40</td>
+                            <td><a href="#">details</a></td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade placebet" tabindex="-1" role="dialog" aria-labelledby="placebet" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content datatable">
+            <h2>New Bet <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button></h2>
+            <div class="col-sm-12">
+                <form class="content-wrapper" role="form">
+                    <div class="col-sm-2 teamtitle">Team One</div>
+                    <div class="form-group col-sm-3">
+                        <select id="country_a" placeholder="Country">
+                            <option>Country 1</option>
+                            <option>Country 2</option>
+                            <option>Country 3</option>
+                            <option>Country 4</option>
+                            <option>Country 5</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-sm-3">
+                        <select id="league_a" placeholder="League">
+                            <option>League 1</option>
+                            <option>League 2</option>
+                            <option>League 3</option>
+                            <option>League 4</option>
+                            <option>League 5</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-sm-3">
+                        <select id="team_a" placeholder="Team">
+                            <option>Team 1</option>
+                            <option>Team 2</option>
+                            <option>Team 3</option>
+                            <option>Team 4</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-12">
+                <form class="content-wrapper" role="form">
+                    <div class="col-sm-2 teamtitle">Team Two</div>
+                    <div class="form-group col-sm-3">
+                        <select id="country_b" placeholder="Country">
+                            <option>Country 1</option>
+                            <option>Country 2</option>
+                            <option>Country 3</option>
+                            <option>Country 4</option>
+                            <option>Country 5</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-sm-3">
+                        <select id="league_b" placeholder="League">
+                            <option>League 1</option>
+                            <option>League 2</option>
+                            <option>League 3</option>
+                            <option>League 4</option>
+                            <option>League 5</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-sm-3">
+                        <select id="team_b" placeholder="Team">
+                            <option>Team 1</option>
+                            <option>Team 2</option>
+                            <option>Team 3</option>
+                            <option>Team 4</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-sm-12">
+                <div class="teamsbet">
+                    <div class="col-sm-4">
+                        <h4>Liverpool <span><img src="images/shirt_transparent.png" alt="Team Uniform"/></span><small>3/1</small></h4>
+                    </div>
+                    <div class="col-sm-4">
+                        <h4>Draw <span><img src="images/shirt_transparent.png" alt="Team Uniform"/></span><small>3/1</small></h4>
+                    </div>
+                    <div class="col-sm-4 active">
+                        <h4>Everton <span><img src="images/shirt_transparent.png" alt="Team Uniform"/></span><small>3/1</small></h4>
+                    </div>
+                </div>
+                <form class="form-inline" role="form" style="margin-bottom: 20px; margin-top:10px">
+                    <div class="form-group">
+                        <input type="number" class="form-control" id="amount" placeholder="Enter amount to bet">
+                    </div>
+                    <button type="submit" class="btn_betnow">Bet Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>    
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/select2/select2.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js scripts/plugins.js -->
+        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/affix.js"></script>
+        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/alert.js"></script>
+        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/dropdown.js"></script>
+        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tooltip.js"></script>
+        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/modal.js"></script>
+        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/transition.js"></script>
+        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/button.js"></script>
+        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/popover.js"></script>
+        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/carousel.js"></script>
+        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/scrollspy.js"></script>
+        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/collapse.js"></script>
+        <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tab.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
